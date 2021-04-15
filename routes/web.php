@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProdutosController;
-use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +18,22 @@ use App\Http\Controllers\UsuariosController;
 
 Route::get('/', HomeController::class)->name('home'); 
 
-Route::get('produtos/inserir', [ProdutosController::class, 'create'])->name('produtos.inserir');
+Route::get('products/insert', [ProductsController::class, 'create'])->name('products.insert');
 
-Route::get('produtos/{id}', [ProdutosController::class, 'show'])->name('produtos.descricao');
+Route::get('products/{id}', [ProductsController::class, 'show'])->name('products.description');
 
-Route::get('produtos', [ProdutosController::class, 'index'])->name('produtos');
+Route::get('products', [ProductsController::class, 'index'])->name('products');
 
-Route::post('produtos', [ProdutosController::class, 'insert'])->name('produtos.insert');
+Route::post('products', [ProductsController::class, 'insert'])->name('products.insert');
 
-Route::get('produtos/{produto}/edit', [ProdutosController::class, 'edit'])->name('produtos.edit');
+Route::get('products/{product}/edit', [ProductsController::class, 'edit'])->name('products.edit');
 
-Route::put('produtos/{produto}', [ProdutosController::class, 'editar'])->name('produtos.editar');
+Route::put('products/{product}', [ProductsController::class, 'editRequest'])->name('products.editRequest');
 
-Route::get('produtos/{produto}/delete', [ProdutosController::class, 'modal'])->name('produtos.modal');
+Route::get('products/{product}/delete', [ProductsController::class, 'modal'])->name('products.modal');
 
-Route::delete('produtos/{produto}', [ProdutosController::class, 'delete'])->name('produtos.delete');
+Route::delete('products/{product}', [ProductsController::class, 'delete'])->name('products.delete');
 
-Route::post('painel', [UsuariosController::class, 'login'])->name('usuarios.login');
+Route::post('painel', [UsersController::class, 'login'])->name('users.login');
 
-Route::get('', [UsuariosController::class, 'logout'])->name('usuarios.logout');
+Route::get('', [UsersController::class, 'logout'])->name('users.logout');

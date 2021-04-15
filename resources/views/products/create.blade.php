@@ -2,27 +2,27 @@
 @section('title', 'Criar Produto')
 @section('content')
     <div class="container mt-4">
-        <form method="POST" action="{{ route('produtos.insert') }}">
+        <form method="POST" action="{{ route('products.insert') }}">
             @csrf
             <div class="row">
                 <div class="col-md-4">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="" name="nome">
+                        <input type="text" class="form-control" id="" name="name">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Estoque</label>
-                        <input type="text" class="form-control" id="" name="estoque">
+                        <input type="text" class="form-control" id="" name="stock">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Valor</label>
-                        <input type="text" class="form-control" id="" name="valor">
+                        <input type="text" class="form-control" id="" name="price">
                     </div>
                 </div>
 
